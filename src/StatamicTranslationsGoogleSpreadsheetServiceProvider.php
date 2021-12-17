@@ -32,16 +32,7 @@ class StatamicTranslationsGoogleSpreadsheetServiceProvider extends AddonServiceP
             ->description(__('Sync translations Statamic V3 with Google Spreadsheet'))
             ->routes(function (Router $router) {
                 $router->get('/', [StatamicTranslationsGoogleSpreadsheetController::class, 'index'])->name('index');
-
-
-                $router->get('/add', [StatamicTranslationsGoogleSpreadsheetController::class, 'create'])->name('create');
-                $router->post('/add', [StatamicTranslationsGoogleSpreadsheetController::class, 'store'])->name('store');
-                $router->post('/{index}/download', [StatamicTranslationsGoogleSpreadsheetController::class, 'download'])->name('download');
-
-                $router->get('/{index}', [StatamicTranslationsGoogleSpreadsheetController::class, 'show'])->name('show');
-
-                $router->put('/{index}', [StatamicTranslationsGoogleSpreadsheetController::class, 'update'])->name('update');
-                $router->delete('/{index}', [StatamicTranslationsGoogleSpreadsheetController::class, 'delete'])->name('delete');
+                $router->post('/save', [StatamicTranslationsGoogleSpreadsheetController::class, 'save'])->name('save');
             })
             ->register();
 
