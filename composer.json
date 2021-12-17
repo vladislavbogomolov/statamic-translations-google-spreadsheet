@@ -1,0 +1,49 @@
+{
+  "name": "vladislavbogomolov/statamic-translations-google-spreadsheet",
+  "type": "statamic-addon",
+  "description": "Translations of strings for statamic managed on google spreadsheet",
+  "autoload": {
+    "psr-4": {
+      "VladislavBogomolov\\StatamicTranslationsGoogleSpreadsheet\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "VladislavBogomolov\\StatamicTranslationsGoogleSpreadsheet\\Tests\\": "tests"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladislav Bogomolov",
+      "email": "bogomolov.vlad@gmail.com"
+    }
+  ],
+  "require": {
+    "statamic/cms": "^3.0",
+    "google/apiclient": "^2.0"
+  },
+  "extra": {
+    "statamic": {
+      "name": "STGS",
+      "description": "Translations of strings for statamic managed on google spreadsheet",
+      "version": "0.0.2"
+    },
+    "laravel": {
+      "providers": [
+        "VladislavBogomolov\\StatamicTranslationsGoogleSpreadsheet\\StatamicTranslationsGoogleSpreadsheetServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+    ]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "orchestra/testbench": "^6.23"
+  }
+}
