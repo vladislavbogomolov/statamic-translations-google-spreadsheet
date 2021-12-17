@@ -10,10 +10,17 @@
     <div class="max-w-lg mt-2 mx-auto">
         <form action="{{ cp_route('utilities.statamic-translations-google-spreadsheet.save')  }}" method="post">
             @csrf
-            <div class="rounded p-3 lg:px-7 lg:py-5 shadow bg-white">
+            <div class="rounded p-3 lg:px-7 lg:py-5 shadow bg-white text-center">
                 <header class="text-center mb-6">
                     <h1 class="mb-3">{{ __('Update translations') }}</h1>
                 </header>
+
+                @if(isset($result) && $result === true)
+                    <div style="color: green;">Translations updated</div>
+                @elseif(isset($result) && $result !== true)
+                    <div style="color: red;">Translations have not been updated</div>
+                @endif
+
             </div>
 
             <div class="flex justify-center mt-4">

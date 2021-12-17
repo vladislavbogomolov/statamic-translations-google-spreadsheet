@@ -11,14 +11,19 @@ use Statamic\Http\Controllers\Controller;
 class StatamicTranslationsGoogleSpreadsheetController extends Controller
 {
 
-    private $_translation_folder = 'resources/lang/vendor/statamic-translations-google-spreadsheet';
+    private $_translation_folder;
+
+    function __construct()
+    {
+        $this->_translation_folder = base_path('resources/lang/vendor/statamic-translations-google-spreadsheet');
+    }
 
     function downloadTranslations()
     {
         $client = new Google_Client();
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-        $client->setAuthConfig('client_secret.json');
+        $client->setAuthConfig(base_path('client_secret.json'));
         $client->setAccessType('offline');
         $client->setPrompt('select_account consent');
         $client->setApprovalPrompt("consent");
