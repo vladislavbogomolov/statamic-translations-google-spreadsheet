@@ -15,11 +15,11 @@ class StatamicTranslationsGoogleSpreadsheetServiceProvider extends AddonServiceP
     ];*/
 
     protected $modifiers = [
-        'VladislavBogomolov\StatamicRepoSyncAzure\StatamicRepoModifier'
+        'VladislavBogomolov\StatamicTranslationsGoogleSpreadsheet\StatamicRepoModifier'
     ];
 
     protected $commands = [
-        'VladislavBogomolov\StatamicRepoSyncAzure\StatamicRepoCommand'
+        'VladislavBogomolov\StatamicTranslationsGoogleSpreadsheet\StatamicRepoCommand'
     ];
 
     public function boot()
