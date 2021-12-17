@@ -5,6 +5,7 @@ namespace VladislavBogomolov\StatamicTranslationsGoogleSpreadsheet;
 use Google\Exception;
 use Google_Client;
 use Google_Service_Sheets;
+use Illuminate\Http\Request;
 use Statamic\Http\Controllers\Controller;
 
 class StatamicTranslationsGoogleSpreadsheetController extends Controller
