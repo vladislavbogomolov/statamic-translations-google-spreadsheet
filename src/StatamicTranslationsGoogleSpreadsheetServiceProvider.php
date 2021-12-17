@@ -14,13 +14,6 @@ class StatamicTranslationsGoogleSpreadsheetServiceProvider extends AddonServiceP
         __DIR__.'/../resources/js/logbook.js'
     ];*/
 
-    protected $modifiers = [
-        'VladislavBogomolov\StatamicTranslationsGoogleSpreadsheet\StatamicRepoModifier'
-    ];
-
-    protected $commands = [
-        'VladislavBogomolov\StatamicTranslationsGoogleSpreadsheet\StatamicRepoCommand'
-    ];
 
     public function boot()
     {
