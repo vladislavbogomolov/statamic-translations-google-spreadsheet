@@ -55,7 +55,12 @@ class StatamicTranslationsGoogleSpreadsheetController extends Controller
         }
 
         foreach ($files as $language => $file) {
-            file_put_contents($this->_translation_folder. '/' . $language.'.php', '<?php return ' . var_export($file, true) . ';');
+
+            if (!file_exists($this->_translation_folder . '/' . $language)) {
+                mkdir($this->_translation_folder . '/' . $language, 0777, true);
+            }
+
+            file_put_contents($this->_translation_folder . '/' . $language . '/google-spreadsheet.php', '<?php return ' . var_export($file, true) . ';');
         }
 
         return true;
