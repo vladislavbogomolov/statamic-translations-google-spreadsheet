@@ -15,7 +15,7 @@ class StatamicTranslationsGoogleSpreadsheetController extends Controller
 
     function __construct()
     {
-        $this->_translation_folder = base_path('resources/lang/vendor/statamic-translations-google-spreadsheet');
+        $this->_translation_folder = base_path('resources/lang');
     }
 
     function downloadTranslations()
