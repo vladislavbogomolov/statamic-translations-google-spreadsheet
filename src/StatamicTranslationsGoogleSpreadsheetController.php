@@ -60,7 +60,7 @@ class StatamicTranslationsGoogleSpreadsheetController extends Controller
                 mkdir($this->_translation_folder . '/' . $language, 0777, true);
             }
 
-            file_put_contents($this->_translation_folder . '/' . $language . '/google-spreadsheet.php', '<?php return ' . var_export($file, true) . ';');
+            file_put_contents($this->_translation_folder . '/' . $language . '/custom.php', '<?php return ' . var_export($file, true) . ';');
         }
 
         return true;
