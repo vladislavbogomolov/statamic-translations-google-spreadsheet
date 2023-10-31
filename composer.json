@@ -20,7 +20,7 @@
     }
   ],
   "require": {
-    "statamic/cms": "^3.0",
+    "statamic/cms": "^4.0",
     "google/apiclient": "^2.0"
   },
   "extra": {
