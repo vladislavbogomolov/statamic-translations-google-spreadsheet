@@ -26,7 +26,7 @@ class StatamicTranslationsGoogleSpreadsheetServiceProvider extends AddonServiceP
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'statamic-translations-google-spreadsheet');
 
-        Utility::make('statamic-translations-google-spreadsheet')
+        /*Utility::make('statamic-translations-google-spreadsheet')
             ->title(__('statamic-translations-google-spreadsheet'))
             ->icon('addons')
             ->description(__('Sync translations Statamic V3 with Google Spreadsheet'))
@@ -34,7 +34,7 @@ class StatamicTranslationsGoogleSpreadsheetServiceProvider extends AddonServiceP
                 $router->get('/', [StatamicTranslationsGoogleSpreadsheetController::class, 'index'])->name('index');
                 $router->post('/save', [StatamicTranslationsGoogleSpreadsheetController::class, 'save'])->name('save');
             })
-            ->register();
+            ->register();*/
 
         Statamic::afterInstalled(function ($command) {
             # (new StatamicTranslationsGoogleSpreadsheetController)->createConfigFile();
